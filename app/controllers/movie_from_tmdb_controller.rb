@@ -1,0 +1,2 @@
+class MovieFromTmdbController < ApplicationController
+end

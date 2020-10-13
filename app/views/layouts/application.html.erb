@@ -7,7 +7,101 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #96bb7c;
+}
+
+.navbar a {
+  font-size: 48px;
+  color: #c26565;
+  text-align: center;
+  text-decoration: none;
+  font-style:Monaco;
+  text-shadow: 0 0 10px #FFFFFF, 2px 2px 2px rgba(206,89,55,0);
+}
+
+
+
+body{
+  background-color: #c26565;
+}
+
+
+.button_home {
+  background-color: #eebb4d;
+  color: black;
+  border: 2px solid #eebb4d;
+  padding: 26px 20px;
+  font-size: 16px;
+  display: block;
+  
+}
+
+.button_new {
+  background-color: #f5f1da;
+  color: black;
+  border: 2px solid #96bb7c;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.button_new:hover {background-color: #c26565;color: white;}
+
+.button_table {
+  background-color: white;
+  color: black;
+  border: 2px solid #96bb7c;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+.button_table:hover {background-color: #96bb7c;color: white;}
+
+body{
+  background-color: #c26565;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box_table {
+  width: 1400px;
+  height: 500px;
+  padding: 10px;
+  margin: 0;
+}
+
+#table-scroll {
+  height:150px;
+  overflow:auto;  
+  margin-top:20px;
+}
+
+</style>
+
+<div class="navbar">
+<%= link_to 'BOOKKYTOMATOES', movies_path %>
+<%= link_to '<button class="button_new">Add New Movies</button>'.html_safe, new_movie_path %>
+</div>
+
+<p id="notice"><%= notice %></p>  
+    </head>
+  
 
   <body>
     <%= yield %>
