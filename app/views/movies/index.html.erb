@@ -8,6 +8,15 @@
   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 <% end %>
 
+<div class="center">
+  <strong> Welcome <%= current_user.name %></strong>
+  </div>
+  <br>
+  <div class="center">
+  <%= link_to '<button class="button_new">Add New Movies</button>'.html_safe, new_movie_path %>
+  <a href="/search" ><button class="button_new">SearchTMDb</button></a>    
+  </div>
+
 <br>
 <div class="center">
 <div class="box_table">
