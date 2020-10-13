@@ -85,8 +85,16 @@ body{
   margin: 0;
 }
 
+h1{
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+}
 
-.login-form {
+label{
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 20px;
+}
+
+.movie-form {
   display: flex;
   width: 30%;
   flex-direction: column;
@@ -95,6 +103,7 @@ body{
   color: #c26565;
   background: #f5f1da;
   border-radius: 10px;
+  border: 7px groove #96bb7c;
 
   h1 {
     margin: 0 0 24px 0;
@@ -115,6 +124,34 @@ body{
   overflow:auto;  
   margin-top:20px;
 }
+
+.number_rating{
+  placeholder:1-10
+}
+
+.button_submit {
+  background-color: #f5f1da ;
+  color: #96bb7c;
+  border: 4px solid #96bb7c;
+  padding: 14px 40px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 20px;
+}
+
+.button_submit:hover {background-color: #96bb7c;color: white;}
+
+.button_back {
+  background-color: #f5f1da ;
+  color: #c26565;
+  border: 4px solid #c26565;
+  padding: 14px 40px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 20px;
+}
+
+.button_back:hover {background-color: #c26565 ;color: white;}
 
 </style>
 
