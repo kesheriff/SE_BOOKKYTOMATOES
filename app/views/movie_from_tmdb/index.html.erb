@@ -19,7 +19,6 @@
 <table class="table table-hover" width="70%" border="5px" bgcolor="#96bb7c" padding="15px">
   <thead>
     <tr>
-    <th style="width:10%" >ID</th>
     <th >Title</th>
     <th >Rating</th>
     <th >Release Date</th>
@@ -30,7 +29,6 @@
   <tbody bgcolor="#f5f1da">
     <% @movie_list.each do |movie| %>
       <tr>
-      <td padding: 15px ><%= movie['id'] %></td>
       <td padding: 15px ><img src="https://image.tmdb.org/t/p/w500/<%= movie['poster_path'] %>" alt="" height="15%"><br><%= movie['title'] %></td>
       <td padding: 15px><%= movie['vote_average'] %></td>
       <td padding: 15px><%= movie['release_date'] %></td>
