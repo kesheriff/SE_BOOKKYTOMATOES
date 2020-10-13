@@ -22,7 +22,6 @@
     <th >Title</th>
     <th >Rating</th>
     <th >Release Date</th>
-    <th style="width:7%" colspan="1"></th>
     </tr>
   </thead>
 
@@ -32,7 +31,6 @@
       <td padding: 15px ><img src="https://image.tmdb.org/t/p/w500/<%= movie['poster_path'] %>" alt="" height="15%"><br><%= movie['title'] %></td>
       <td padding: 15px><%= movie['vote_average'] %></td>
       <td padding: 15px><%= movie['release_date'] %></td>
-      <td padding: 15px><%= link_to '<button class="button_table">Show</button>'.html_safe, movie %></button></td>
       </tr>
     <% end %>
   </tbody>
