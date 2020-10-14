@@ -250,35 +250,14 @@ table{
 
 
 </style>
-<% unless current_user %>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="center">
-  <div class="movie-form">
-  <%= link_to '<button class="button_sign_in_facebook_main">Sign in with facebook</button>'.html_safe, user_facebook_omniauth_authorize_path %>
-  
-  </div>
-  </div>
 
-  <% else %>
 <div class="navbar">
 <%= link_to 'BOOKKYTOMATOES', movies_path %>
 <%= form_tag search_path, :method => 'get' do %>
   <%= text_field_tag :search, params[:search] ,:class => 'input_search' %>
   <%= submit_tag "Search" ,:class => 'button_search' ,:autocomplete => "off"%>
-<% end %>
-<%= link_to "Logout", destroy_user_session_path, method: :delete %>
 </div>
-
 
 <p id="notice"><%= notice %></p>  
     </head>
