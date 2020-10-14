@@ -1,22 +1,29 @@
-<h1>Editing Movie</h1>
-
-<%= form_for @movie do |f| %>
+<div class="center">
+<%= form_for @movie,html: {class: "movie-form"} do |f| %>
+    <h1>Edit Movie</h1>
     <br>
     <%= f.label :title %>
     <%= f.text_field :title %>
     <br>
+    
     <%= f.label :rating %>
-    <%= f.text_field :rating %>
+    <%= f.number_field :rating, in: 1.0..10.0, step: 0.1 , placeholder: "1-10" %>
+
     <br>
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_area :description, cols: "30" , rows: "4"%>
     <br>
     <%= f.label :release_date %>
-    <%= f.date_field :release_date %>
+    <%= f.date_field :release_date ,min: "1930-12-31" ,max: "2020-10-20" %>
     <br>
-    <%= f.submit "Update Movie"%>
     <br>
+    <div>
+    <%= f.submit :SUBMIT ,class: "button_submit"%>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <%= link_to '<button class="button_back">CANCEL</button>'.html_safe, movies_path(@movie) %>
+    </div>
+    <br>
+    <br>
+    
+    
 <% end %>
-
-<%= link_to 'Show', @movie %> |
-<%= link_to 'Back', movies_path %>
+</div>

@@ -1,7 +1,13 @@
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <body>
-
+<div class="center">
+<div class="movie-form">
 <p class="c_show" style="text-align:center">
   <strong>Title:</strong>
   <%= @movie.title %>
@@ -23,15 +29,13 @@
 </p>
 
 <div class="center">
-<%= link_to '<button class="button_show">Edit</button>'.html_safe, edit_movie_path(@movie) %>
-<%= link_to '<button class="button_show">Delete</button>'.html_safe, @movies,:method => :delete %>
+<%= link_to '<button class="button_submit">Edit</button>'.html_safe, edit_movie_path(@movie) %>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<%= link_to '<button class="button_delete">Delete</button>'.html_safe, @movies,:method => :delete %>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<%= link_to '<button class="button_back">Back</button>'.html_safe, movies_path(@movie) %>
 </div>
-<br>
-<div class="center">
-<%= link_to '<button class="button_show">Back</button>'.html_safe, movies_path(@movie) %>
-
-
-
+</div>
 </div>
 </body>
 
