@@ -1,7 +1,9 @@
 class MoviesController < ApplicationController
     
     before_action :set_movie, only: [:show, :edit, :update, :destroy]
-
+    
+    def home
+    end
     def index
         @movies = Movie.all
     end

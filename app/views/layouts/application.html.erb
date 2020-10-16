@@ -2,12 +2,7 @@
 <html>
   <head>
     <title>Bookkytomatoes</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta charset="utf-8">
+ 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -17,21 +12,43 @@
 
 <style>
 
-.navbar {
-  overflow: hidden;
-  background-color: #96bb7c;
-}
-
-.navbar a {
+.bookkytomatoes{
   font-size: 300%;
   color: #c26565;
-  text-align: center;
-  text-decoration: none;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
   font-family: monaco,Consolas,Lucida Console,monospace; 
   text-shadow: 0 0 10px #FFFFFF, 2px 2px 2px rgba(206,89,55,0);
 }
 
+.bookkytomatoes:hover {background-color: #96bb7c;color: #f5f1da;}
 
+.button_in_nav {
+  background-color: #f5f1da;
+  color: #c26565;
+  border: 4px solid #c26565;
+  padding: 4px 20px;
+  font-size: 125%;
+  border-radius: 12px;
+  display: block;
+  font-family: monaco,Consolas,Lucida Console,monospace;
+  float: left;
+  
+}
+
+.button_in_nav:hover {background-color: #c26565 ;color: white;}
+
+.navbar {
+  overflow: hidden;
+  align-items: left;
+  justify-content: left;
+  background-color: #96bb7c;
+}
+
+
+
+.navbar a:hover {background-color: #96bb7c;color: #f5f1da;}
 
 body{
   background-color: #c26565;
@@ -80,6 +97,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+
+  .left {
+    display: flex;
+    justify-content: left;
+    align-items: left;
   }
 
   .box_table {
@@ -253,10 +277,14 @@ table{
 
 
 <div class="navbar">
-<%= link_to 'BOOKKYTOMATOES', movies_path %>
-<%= form_tag search_path, :method => 'get' do %>
-  <%= text_field_tag :search, params[:search] ,:class => 'input_search' %>
-  <%= submit_tag "Search" ,:class => 'button_search' ,:autocomplete => "off"%>
+
+
+<%= link_to '<button class="bookkytomatoes">BOOKKYTOMATOES</button>'.html_safe, movies_path %>
+&emsp;&emsp;&emsp;&emsp;
+<%= link_to '<button class="button_in_nav">Add New Movies</button>'.html_safe, new_movie_path %> 
+&emsp;
+<%= link_to '<button class="button_in_nav">Review Movie</button>'.html_safe, reviews_path %>  
+  
 </div>
 
 <p id="notice"><%= notice %></p>  
@@ -267,6 +295,6 @@ table{
     <%= yield %>
   </body>
 </html>
-<% end %>
+
 
 
