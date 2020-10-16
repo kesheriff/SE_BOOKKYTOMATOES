@@ -4,7 +4,7 @@ Rails.application.routes.draw do
      :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :movies,:tmdb_search,:reviews
-  root to: 'movies#home'
+  root to: 'movies#index'
   get 'search' => 'movie_from_tmdb#index' , as:'search'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
