@@ -22,6 +22,5 @@ class User < ApplicationRecord
     end
   end
   
-  has_many:movies
-  has_many:review, dependent: :destroy
+  
 end
