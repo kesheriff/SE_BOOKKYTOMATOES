@@ -73,13 +73,6 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
-    coffee-rails (5.0.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 5.2.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     devise (4.7.3)
@@ -89,7 +82,6 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.9.0)
-    execjs (2.7.0)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.13.1-x64-mingw32)
@@ -224,11 +216,6 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    turboboost (0.1.1)
-      coffee-rails
-      jquery-rails
-      railties
-      turbolinks
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -280,7 +267,6 @@ DEPENDENCIES
   spring-watcher-listen (= 2.0.1)
   sqlite3 (= 1.4.2)
   themoviedb
-  turboboost
   turbolinks (= 5.2.1)
   tzinfo-data
   web-console (= 4.0.2)
