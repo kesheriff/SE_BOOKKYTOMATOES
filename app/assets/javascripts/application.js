@@ -1,4 +1,4 @@
-// = require jquery3
-// = require jquery_ujs
-// = require Turbolinks
-// = require_tree .
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree.
